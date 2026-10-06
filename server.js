@@ -39,6 +39,10 @@ app.post('/extract', async (req, res) => {
   }
 });
 
+app.get('/warmup', (req, res) => {
+  res.status(200).send('warm');
+});
+
 app.get('/', (req, res) => res.send('BrineTube Extractor is running'));
 
 const PORT = process.env.PORT || 8080;
